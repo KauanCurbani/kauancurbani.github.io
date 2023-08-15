@@ -6,9 +6,18 @@
   box-sizing: border-box;
 }
 
+:root{
+  --g1:#0066df;
+  --g2:#aa0222;
+}
+
 body {
   background-color: #000;
   height: 200vh;
+}
+.app {
+  height: 200vh;
+  overflow: hidden;
 }
 
 .blob {
@@ -17,33 +26,35 @@ body {
   left: 0;
   width: 550px;
   aspect-ratio: 1;
-  background: linear-gradient(to right, #0066df, #aa0222);
+  background: linear-gradient(to right, var(--g1), var(--g2));
   animation: blob 10s infinite linear;
   translate: -50% -50%;
   z-index: 0;
 }
 .blob2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 550px;
-    aspect-ratio: 1;
-    background: linear-gradient(to right, #0066df, #aa0222);
-    animation: blob 10s infinite linear;
-    translate: -50% -50%;
-    z-index: 0;
-  }
-  .blob3 {
-    position: absolute;
-    top: 50vh;
-    right: 0;
-    width: 550px;
-    aspect-ratio: 1;
-    background: linear-gradient(to right, #0066df, #aa0222);
-    animation: blob 10s infinite linear;
-    translate: -50% -50%;
-    z-index: 0;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  aspect-ratio: 1;
+  background: linear-gradient(to right, var(--g1), var(--g2));
+  animation: blob 10s infinite linear;
+  translate: -50% -50%;
+  z-index: 0;
+  opacity: 0.5;
+}
+.blob3 {
+  position: absolute;
+  top: 50vh;
+  right: 0;
+  width: 550px;
+  aspect-ratio: 1;
+  background: linear-gradient(to right, var(--g1), var(--g2));
+  animation: blob 10s infinite linear;
+  translate: -50% -50%;
+  z-index: 0;
+  opacity: 0.5;
+}
 .blur {
   position: absolute;
   height: 200vh;
@@ -83,20 +94,23 @@ body {
 .text1 {
   font-family: "Barriecito";
 }
-.row{
-    display: flex;
-    justify-content: space-between;
+.row {
+  display: flex;
+  justify-content: space-between;
 }
 .text2 {
   font-family: "Raleway";
+  font-weight: 700;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-.word{
-    transition: all .2s ease;
+.word {
+  transition: all 0.2s ease;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
-.fancy{
-    cursor: pointer;
-    letter-spacing: -8px;
+.fancy {
+  cursor: pointer;
+  letter-spacing: -8px;
 }
-.centerText:has(.fancy:hover) .word:not(.fancy:hover){
-    opacity: 0.2;
+.centerText:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
 }
