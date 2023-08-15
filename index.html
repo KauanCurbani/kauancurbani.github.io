@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="blob" id="blob"></div>
+      <div class="blob2" id="blob2" data-scene data-speed="0.1"></div>
+      <div class="blob3" id="blob3" data-scene data-speed="0.2"></div>
+      <div class="blur"></div>
+
+      <section class="home" data-scene data-speed="0.4">
+        <div class="centerText">
+          <div class="row">
+            <span class="text1 word">FUlL-StACk</span>
+            <span class="text1 word">Developer</span>
+          </div>
+          <div class="row">
+            <span class="text1 word" style="font-size: 8vmin"> Kauan___</span>
+            <span class="text1 word"> 19* </span>
+          </div>
+          <div class="row">
+            <span class="text1 word">&lt;/&gt; </span>
+            <span class="text1 word" style="font-size: 8vmin">Curbani</span>
+          </div>
+          <div class="row">
+            <span
+              class="text1 word fancy"
+              id="fancy"
+              style="font-size: 8vmin; display: flex; gap: 12px"
+              onclick="toLinkedin()"
+            >
+              <span class="text1 linkedin">.</span>
+              <span class="text1 linkedin">i</span>
+              <span class="text1 linkedin">n</span>
+              <span class="text1 linkedin">/</span>
+              <span class="text1 linkedin">c</span>
+              <span class="text1 linkedin">u</span>
+              <span class="text1 linkedin">r</span>
+              <span class="text1 linkedin">b</span>
+              <span class="text1 linkedin">a</span>
+              <span class="text1 linkedin">n</span>
+              <span class="text1 linkedin">i</span>
+              <span class="text1 linkedin">i</span>
+              <span class="text1 linkedin">d</span>
+              <span class="text1 linkedin">e</span>
+              <span class="text1 linkedin">v</span>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="home"></section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/rolly.js@0.4.0/dist/rolly.min.js"></script>
+    <script>
+      const r = rolly({
+        view: document.querySelector(".app"),
+        native: true,
+      });
+      r.init();
+
+      function toLinkedin(){
+        window.open("https://linkedin.com/in/curbaniidev")
+      }
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

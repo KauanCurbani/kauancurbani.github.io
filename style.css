@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 200vh;
+}
+
+.blob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 550px;
+  aspect-ratio: 1;
+  background: linear-gradient(to right, #0066df, #aa0222);
+  animation: blob 10s infinite linear;
+  translate: -50% -50%;
+  z-index: 0;
+}
+.blob2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 550px;
+    aspect-ratio: 1;
+    background: linear-gradient(to right, #0066df, #aa0222);
+    animation: blob 10s infinite linear;
+    translate: -50% -50%;
+    z-index: 0;
+  }
+  .blob3 {
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    width: 550px;
+    aspect-ratio: 1;
+    background: linear-gradient(to right, #0066df, #aa0222);
+    animation: blob 10s infinite linear;
+    translate: -50% -50%;
+    z-index: 0;
+  }
+.blur {
+  position: absolute;
+  height: 200vh;
+  width: 100%;
+  z-index: 2;
+  backdrop-filter: blur(200px);
+}
+
+@keyframes blob {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 27% 73% 70% 30% / 64% 28% 72% 36%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: rotate(360deg);
+  }
+}
+
+.home {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerText {
+  font-size: 4vmin;
+  color: #f4f5f9;
+  opacity: 0.8;
+}
+.text1 {
+  font-family: "Barriecito";
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.text2 {
+  font-family: "Raleway";
+}
+.word{
+    transition: all .2s ease;
+}
+.fancy{
+    cursor: pointer;
+    letter-spacing: -8px;
+}
+.centerText:has(.fancy:hover) .word:not(.fancy:hover){
+    opacity: 0.2;
+}
